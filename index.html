@@ -9,9 +9,43 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/popular.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- modal section -->
+    <div class="overlay" id="overlay">
+      <div class="modal-container">
+        <h1 class="req">Request a Dish</h1>
+        <div class="input-area">
+          <label for="" class="name">Name*</label>
+          <input type="text" class="input" id="input" />
+        </div>
+        <div class="input-area">
+      
+        <label for="" class="upload-img">Upload an image</label>
+        <input type="url" class="input" id="input" />
+      </div>
+      
+        <div class="btn-container">
+          <button class="cancel" onclick="cancelDishRequest()">Cancel</button>
+          <button class="submit-req">Submit Request</button>
+        </div>
+      </div>
+      </div>
+
+<!-- cart-modal -->
+      <div class="overlay" id="overlay-cart">
+        <div class="modal-container-cart">
+          <img src="./icons/Cart.svg" alt="cart" class="cart-img" id="cart-img"/>
+          <h1 class="empty">Cart is Empty</h1>
+          <p class="checkout">Add some items to the cart to checkout</p>
+          <button class="request" onclick="backToMenu()">Back to Menu</button>
+        </div>
+      </div>
+
+
+
     <!-- header section starts  -->
     <header class="header">
       <div class="prt1">
@@ -26,7 +60,10 @@
       </nav>
       <div class="prt3">
         <img class="head-image" src="./icons/Search.svg" alt="search" />
-        <img class="head-image" src="./icons/Cart.svg" alt="cart" />
+        <div class="cart" onclick="openCart()">
+        <img class="" src="./icons/Cart.svg" alt="cart" style="pointer-events: none;"/>
+        <div class="dot" style="pointer-events: none;"></div>
+      </div>
       </div>
     </header>
     <!-- search area -->
@@ -50,270 +87,272 @@
     <!-- kitchen section -->
     <div class="kitchen-section">
       <div class="kitchen-heading">
-        <h2>Home Kitchen</h2>
+        <h1 class="kitchen-heading">Home Kitchen</h1>
       </div>
       <div id="cards" class="cards">
-        <!-- <div class="card-1">
+         <div class="card-1">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
+            <img  class="img-card" id="img-card" src="./images/image-1.png" />
             <span class="small-box">50%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-
         <div class="card-2">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-2.png"/>
+            
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
-                <p>&#8377 190</p>
+                <p>Home made pizza</p>
+                <p>&#8377 123</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-3">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-3.png"/>
+            <span class="small-box">20%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-4">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-4.png"/>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-5">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
+            <img  class="img-card" id="img-card" src="./images/image-5.png"/>
             <span class="small-box">50%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
-                <p>&#8377 190</p>
+                <p>Home made pizza</p>
+                <p>&#36 19</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-6">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-6.png"/>
+           
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-7">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-7.png"/>
+            <span class="small-box">20%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-8">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
+            <img  class="img-card" id="img-card" src="./images/image-8.png" />
             <span class="small-box">50%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-9">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
+            <img  class="img-card" id="img-card" src="./images/image-9.png" />
             <span class="small-box">50%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
-                <p>&#8377 190</p>
+                <p>Home made pizza</p>
+                <p>&#36 19</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-10">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-10.png" />
+           
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-11">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-11.png"/>
+            <span class="small-box">20%</span>
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
         </div>
-        
-
         <div class="card-12">
           <div class="card">
-            <img src="./images/unsplash_MqT0asuoIcU.png" class="img-card" />
-            <span class="small-box">50%</span>
+            <img  class="img-card" id="img-card" src="./images/image-12.png"/>
+            
             <div class="card-body">
               <div class="card-head">
-                <p>Home Kitchen</p>
+                <p>Home made pizza</p>
                 <p>&#8377 190</p>
               </div>
               <div class="card-footer">
                 <div class="rating">
                   <img class="star" src="./icons/star.svg" ></img>
-                  <p>4.7</p>
+                  <p class="rate">4.7</p>
+                  <span class="time-wrap">
+                  <p class="time">50-79 min</p>
+                  </span>
                 </div>
-                <p class="time">[50-79 min]</p>
                 <img class="plus" src="./icons/plus.svg"></img>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="popular-section">
@@ -321,11 +360,82 @@
       <div class="popular-item">
         <div class="container">
           <button class="prev" id="prev-btn" onclick="hoverEffect(-1)"><img id="image-response" src="./icons/play.svg"></img></button>
-          <div id="animated" class="animated"></div>
+          <div id="animated" class="animated">
+            <div class="card-4 anime-card" id="anime-card-1">
+              <div class="card inside-card">
+                <img  class="img-card" id="img-card" src="./images/image-1.png"/>
+                
+                <div class="card-body">
+                  <div class="card-head">
+                    <p>Home made pizza</p>
+                    <p>&#8377 190</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="rating">
+                      <img class="star" src="./icons/star.svg" ></img>
+                      <p class="rate">4.7</p>
+                      <span class="time-wrap">
+                      <p class="time">50-79 min</p>
+                      </span>
+                    </div>
+                    <div class="plus-minus">
+                      <img src="./icons/minus.svg"></img>
+                      <p class="number">1</p>
+                      <img  src="./icons/plus.svg"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-2 anime-card " id="anime-card-2">
+              <div class="card inside-card">
+                <img  class="img-card" id="img-card" src="./images/pexels-omar-mahmood-106343 1.png"/>
+                <span class="small-box">20%</span>
+                <div class="card-body">
+                  <div class="card-head">
+                    <p>Tandoori Chicken</p>
+                    <p>&#8377 184</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="rating">
+                      <img class="star" src="./icons/star.svg" ></img>
+                      <p class="rate">4.7</p>
+                      <span class="time-wrap">
+                      <p class="time">50-79 min</p>
+                      </span>
+                    </div>
+                    <img class="plus" src="./icons/plus.svg"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-1 anime-card" id="anime-card-3">
+              <div class="card inside-card">
+                <img  class="img-card" id="img-card" src="./images/pexels-mumma-oyens-8799602 1.png"/>
+                <span class="small-box">50%</span>
+                <div class="card-body">
+                  <div class="card-head">
+                    <p>Chilli Chicken</p>
+                    <p>&#8377 116</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="rating">
+                      <img class="star" src="./icons/star.svg" ></img>
+                      <p class="rate">4.7</p>
+                      <span class="time-wrap">
+                      <p class="time">50-79 min</p>
+                      </span>
+                    </div>
+                    <img class="plus" src="./icons/plus.svg"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <button class="next" id="next-btn" onclick="hoverEffect(1)" ><img id="" src="./icons/play.svg"></img></button>
         </div>
       </div>
-      <button class="request">Request a Dish</button>
+      <button class="request" onclick="getDishRequest()">Request a Dish</button>
     </div>
 
     <!-- video section -->
@@ -340,8 +450,9 @@
         <p class="video-para">
           Choose from a selection of our delicious home cooked dishes </p>
       </div>
-      <div class="video-container">
-        <video width="" height="442"  controls>
+      <div class="video-container" >
+        <img src="./icons/play.svg" alt="" class="play-button" id="play-button">
+        <video width="" height="442" controls id="video">
           <source src="./video/pizza.mp4" type="video/mp4" >
         </video>
       </div>

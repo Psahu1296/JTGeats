@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+      .overlay {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal-container-cart{
+        width: 1336px;
+        height: 95%;
+        background: #f7f8fa;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 80px;
+        box-sizing: border-box;
+      }
+      .req {
+        width: 264px;
+        height: 20px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 20px;
+        /* identical to box height, or 50% */
+        letter-spacing: -0.012em;
+        color: #000000;
+      }
+      .input {
+        width: 1127px;
+        height: 48px;
+        border-radius: 10px;
+        background: #f2f2f2;
+        margin: 35px;
+        border: none;
+      }
+      .back{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 19px 25px;
+        width: 210px;
+        height: 58px;
+        background: #1ac073;
+        border-radius: 10px;
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        border: none;
+        margin: 5px;
+        flex-grow: 0;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+      .cancel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 19px 25px;
+        gap: 10px;
+        color: #1ac073;
+        width: 210px;
+        height: 58px;
+        border: 2px solid #1ac073;
+        border-radius: 10px;
+        margin: 5px;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        letter-spacing: -0.012em;
+      }
+      .btn-container {
+        width: 430px;
+        display: flex;
+      }
+      .input-area {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+      }
+      label {
+        position: absolute;
+        left: 40px;
+        top:15px;
+      }
+      .cart-img{
+        height: 190px;
+        width: 170px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="modal-container-cart">
+        <img src="./icons/Cart.svg" alt="cart" class="cart-img"/>
+        <h1 class="empty">Cart is Empty</h1>
+        <p class="checkout">Add some items to the cart to checkout</p>
+          <button class="back">Back to Menu</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

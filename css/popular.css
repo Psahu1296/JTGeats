@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('http://fonts.cdnfonts.com/css/montserrat');
 .popular-section {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,23 @@
   align-items: center;
   width: 100vw;
   height: 600px;
+}
+.popular-header{
+
+  width: 427px;
+  height: 36px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 20px;
+  /* or 50% */
+  
+  text-align: center;
+  letter-spacing: -0.012em;
+  
+  color: #000000;
 }
 .container {
   display: flex;
@@ -33,15 +52,14 @@
   justify-content: center;
   align-items: center;
   padding: 19px 25px;
-  gap: 10px;
-
   width: 210px;
   height: 48px;
-  left: 615px;
-  top: 1900px;
-
   background: #1ac073;
   border-radius: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 80px;
 }
 
 button {
@@ -58,7 +76,7 @@ button {
 .video-section-container {
   width: 100vw;
   height: 860px;
-  /* margin-top: 80px; */
+  margin-top: 80px;
   position: relative;
 }
 
@@ -72,8 +90,12 @@ button {
 }
 .video-header {
   line-height: 0;
+  font-family: 'Montserrat';
+font-style: normal;
 }
 .video-para {
+  font-family: 'Montserrat';
+font-style: normal;
   line-height: 1;
   font-size: 14px;
   letter-spacing: 0.2px;
@@ -90,15 +112,23 @@ button {
   width: fit-content;
   height: 442px;
   position: absolute;
-  left: 25%;
-  right: 0px;
-  top: 220px;
-  bottom: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 14.58%,
     rgba(56, 56, 56, 0.84) 100%
   );
+}
+.play-button{
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: none;
 }
 .form-section {
   /* width: 100vw; */
@@ -131,6 +161,8 @@ flex-grow: 0;
 .margin{
  margin-top: 0px;
  margin-bottom: 20px;
+ font-family: 'Roboto';
+font-style: normal;
 }
 .form-input {
   width: 305px;
@@ -139,16 +171,22 @@ flex-grow: 0;
   border: none;
   padding: 10px;
   box-sizing: border-box;
+  font-family: 'Roboto';
+font-style: normal;
 }
 .form-textarea {
   border-radius: 10px;
   border: none;
   margin-top: 10px;
-  width: 617px;
+  width: 605px;
   resize: none;
   padding: 10px;
+  font-family: 'Roboto';
+font-style: normal;
 }
 .submit{
+  font-family: 'Roboto';
+font-style: normal;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -165,4 +203,24 @@ flex-grow: 0;
 
 .form-pic {
 margin-left: 70px;
+}
+
+.modal-container-cart{
+  width: 1336px;
+  height: 95%;
+  background: #f7f8fa;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+.cart-img{
+  height: 190px;
+  width: 170px;
+}
+.plus{
+  border-radius: 8px;
 }

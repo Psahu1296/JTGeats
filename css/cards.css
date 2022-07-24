@@ -1,13 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .kitchen-section {
   margin: 40px 100px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .kitchen-heading {
   text-align: left;
-  width: 91%;
+  /* width: 91%; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 24px;
+  /* identical to box height, or 60% */
+  letter-spacing: -0.012em;
+  color: #000000;
 }
 .cards {
   display: grid;
@@ -126,8 +136,8 @@ p {
   /* padding: 5px; */
   box-sizing: border-box;
   font-size: 12px;
-  width: fit-content;
-  height: fit-content;
+  /* width: fit-content; */
+  /* height: fit-content; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,6 +169,34 @@ p {
   background: #ffffff;
   border-radius: 5px;
   width: 75px;
-  height: 15px;
+  height: 20px;
   padding: 3px;
+  padding-left: 10px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.anime-card {
+  margin: 20px;
+  
+}
+
+.inside-card {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25) ;
+}
+.active-card {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25) ;
+  transition: all 0.2ms ease-in-out;
+  transform: scale(1.1);
+}
+.plus-minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f3ba00;
+  width: 40px;
+  height: 23px;
+}
+.number {
+  margin: 0 10px;
 }

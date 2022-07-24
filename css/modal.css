@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: none;
+    overflow: hidden;
+  }
+  .modal-container {
+    width: 1336px;
+    height: 647px;
+    background: #f7f8fa;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    padding-top: 80px;
+    box-sizing: border-box;
+  }
+  .req {
+    width: 264px;
+    height: 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 20px;
+    /* identical to box height, or 50% */
+    letter-spacing: -0.012em;
+    color: #000000;
+  }
+  .input {
+    width: 1127px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    margin: 35px;
+    border: none;
+  }
+  .submit-req {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 19px 25px;
+    width: 210px;
+    height: 58px;
+    background: #1ac073;
+    border-radius: 10px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border: none;
+    margin: 5px;
+    flex-grow: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+  .cancel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 19px 25px;
+    gap: 10px;
+    color: #1ac073;
+    width: 210px;
+    height: 58px;
+    border: 2px solid #1ac073;
+    border-radius: 10px;
+    margin: 5px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.012em;
+
+  }
+  .btn-container {
+    width: 430px;
+    display: flex;
+  }
+
+  .input-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+  }
+  label {
+    position: absolute;
+    left: 40px;
+    top:15px;
+  }
+  .empty{
+    width: 241px;
+    height: 37px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: -0.012em;
+    color: #000000;
+    
+    flex: none;
+    flex-grow: 0;
+  }
+.checkout{
+  width: 425px;
+  height: 21px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  color: #AAA7A7;
+  flex: none;
+  flex-grow: 0;
+}

@@ -43,79 +43,158 @@ const cardHTML = `
 </div>
 `;
 
-const cardBody = document.getElementById("cards");
-cardId.map((el, index) => {
-  const cardElement = document.createElement("div");
-  cardElement.setAttribute("id", `${el.id}-${index}`);
-  cardElement.setAttribute("class", `${el.class}`);
-  cardElement.innerHTML = cardHTML;
-  cardBody.appendChild(cardElement);
-  imageSet(cardBody);
-});
+const modalHTML = `<div class="overlay">
+<div class="modal-container">
+  <h1 class="req">Request a Dish</h1>
+  <div class="input-area">
+    <label for="" class="name">Name*</label>
+    <input type="text" class="input" id="input" />
+  </div>
+  <div class="input-area">
 
-function imageSet(parent) {
-  parent.childNodes.forEach((element, index) => {
-    //   console.log(element.firstElementChild);
-    const childElement = element.firstElementChild;
-    if (childElement) {
-      childElement.firstElementChild.src = cardId[index - 3].image;
-      const offerElement = childElement.firstElementChild.nextElementSibling;
-      if (offerElement) {
-        offerElement.textContent = cardId[index - 3].off;
-      }
-      if (offerElement.textContent) {
-        offerElement.style.width = "30px";
-        offerElement.style.height = "30px";
-      } else {
-        offerElement.style.width = "0px";
-        offerElement.style.height = "0px";
-      }
-    }
-  });
-}
+  <label for="" class="upload-img">Upload an image</label>
+  <input type="url" class="input" id="input" />
+</div>
+
+  <div class="btn-container">
+    <button class="cancel">Cancel</button>
+    <button class="submit-req">Submit Request</button>
+  </div>
+</div>
+</div>`
+
+
+// const cardBody = document.getElementById("cards");
+// cardId.map((el, index) => {
+//   const cardElement = document.createElement("div");
+//   cardElement.setAttribute("id", `${el.id}-${index}`);
+//   cardElement.setAttribute("class", `${el.class}`);
+//   cardElement.innerHTML = cardHTML;
+//   cardBody.appendChild(cardElement);
+//   imageSet(cardBody);
+// });
+
+// function imageSet(parent) {
+//   parent.childNodes.forEach((element, index) => {
+//     //   console.log(element.firstElementChild);
+//     const childElement = element.firstElementChild;
+//     if (childElement) {
+//       childElement.firstElementChild.src = cardId[index - 3].image;
+//       const offerElement = childElement.firstElementChild.nextElementSibling;
+//       if (offerElement) {
+//         offerElement.textContent = cardId[index - 3].off;
+//       }
+//       if (offerElement.textContent) {
+//         offerElement.style.width = "30px";
+//         offerElement.style.height = "30px";
+//       } else {
+//         offerElement.style.width = "0px";
+//         offerElement.style.height = "0px";
+//       }
+//     }
+//   });
+// }
 
 const animated = document.getElementById("animated");
 
-cardId.slice(0, 3).map((el, index) => {
-  const animeItem = document.createElement("div");
-  animeItem.setAttribute("id", `anime-${el.id}-`);
-  //   animeItem.setAttribute("class", `${el.class}`);
-  animeItem.innerHTML = cardHTML;
-  animated.appendChild(animeItem);
-});
-const animeItem = document.querySelectorAll(`[id^="anime-card"]`);
-animeItem.forEach((el, index) => {
-  console.log(animeItem);
-  el.style.margin = "10px";
-  const child = el.firstElementChild;
-  if (child) {
-    const image = child.firstElementChild;
-    image.src = cardId[index].image;
-    const offer = image.nextElementSibling;
-    if (offer) {
-      offer.textContent = cardId[index].off;
-    }
-    if (offer.textContent) {
-      offer.style.width = "30px";
-      offer.style.height = "30px";
-    } else {
-      offer.style.width = "0px";
-      offer.style.height = "0px";
-    }
-  }
-});
+// cardId.slice(0, 3).map((el, index) => {
+//   const animeItem = document.createElement("div");
+//   animeItem.setAttribute("id", `anime-${el.id}-`);
+//   //   animeItem.setAttribute("class", `${el.class}`);
+//   animeItem.innerHTML = cardHTML;
+//   animated.appendChild(animeItem);
+// });
+// const animeItem = document.querySelectorAll(`[id^="anime-card"]`);
+// animeItem.forEach((el, index) => {
+//   console.log(animeItem);
+//   el.style.margin = "10px";
+//   const child = el.firstElementChild;
+//   if (child) {
+//     const image = child.firstElementChild;
+//     image.src = cardId[index].image;
+//     const offer = image.nextElementSibling;
+//     if (offer) {
+//       offer.textContent = cardId[index].off;
+//     }
+//     if (offer.textContent) {
+//       offer.style.width = "30px";
+//       offer.style.height = "30px";
+//     } else {
+//       offer.style.width = "0px";
+//       offer.style.height = "0px";
+//     }
+//   }
+// });
 
+// let itemID = 1;
+// const hoverItem = Array.from(animeItem);
+// hoverItem[itemID].classList.add("hoverEffect");
+
+// function hoverEffect(num) {
+//   const itemNum = itemID + parseInt(num);
+//   if (itemNum < 0 || itemNum > 2) {
+//     return;
+//   }
+//   hoverItem[itemID].classList.remove("hoverEffect");
+//   hoverItem[itemNum].classList.add("hoverEffect");
+//   itemID = itemNum;
+//   return;
+// }
 let itemID = 1;
+const animeItem = document.querySelectorAll(`[id^="anime-card"]`);
 const hoverItem = Array.from(animeItem);
-hoverItem[itemID].classList.add("hoverEffect");
+hoverItem[itemID].classList.add("active-card");
 
 function hoverEffect(num) {
   const itemNum = itemID + parseInt(num);
   if (itemNum < 0 || itemNum > 2) {
     return;
   }
-  hoverItem[itemID].classList.remove("hoverEffect");
-  hoverItem[itemNum].classList.add("hoverEffect");
+  hoverItem[itemID].classList.remove("active-card");
+  hoverItem[itemNum].classList.add("active-card");
   itemID = itemNum;
   return;
 }
+
+function getDishRequest() {
+  const overlay = document.getElementById("overlay")
+  overlay.style.display = "flex"
+  document.body.style.overflow = "hidden"
+}
+function cancelDishRequest() {
+  const overlay = document.getElementById("overlay")
+  overlay.style.display = "none"
+  document.body.style.overflow = "auto"
+}
+function openCart() {
+  const cart = document.getElementById("cart-img")
+  cart.style.filter = "brightness(0.7)"
+  // cart.style.background = "grey"
+  const overlay = document.getElementById("overlay-cart")
+  overlay.style.display = "flex"
+  document.body.style.overflow = "hidden"
+}
+function backToMenu() {
+  const overlay = document.getElementById("overlay-cart")
+  overlay.style.display = "none"
+  document.body.style.overflow = "auto"
+}
+
+const video = document.getElementById("video")
+const play = document.getElementById("play-button")
+video.addEventListener('play', () => {
+  if (video.paused ) {
+    play.style.display = 'block'
+  }
+  else{
+    play.style.display = 'none'
+  }
+})
+video.addEventListener('pause', () => {
+  if (video.paused ) {
+    play.style.display = 'block'
+  }
+  else{
+    play.style.display = 'none'
+  }
+})
