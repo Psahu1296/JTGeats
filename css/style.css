@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+}
+
+.header {
+  position: absolute;
+  width: 100vw;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  /* Primary/Green */
+  background: #1ac073;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.logo {
+  /* position: absolute; */
+  width: 89px;
+  height: 20px;
+  /* left: -14.5px; */
+  /* top: 2px; */
+
+  font-family: "Squada One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 20px;
+  /* identical to box height, or 62% */
+  letter-spacing: -0.012em;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar {
+  width: 320px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.head-image {
+  margin: 20px;
+}
+a {
+  width: 48px;
+  height: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+  letter-spacing: -0.012em;
+  /* White */
+  color: #ffffff;
+  text-decoration: none;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.search-div {
+  display: flex;
+  background-color: #1ac073;
+  width: 100vw;
+  height: 720px;
+  padding: 0 60px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.header-text {
+  width: 534px;
+  height: 147px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 82px;
+  /* White */
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.text-of {
+  width: 441px;
+  height: 40px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  /* or 111% */
+  letter-spacing: -0.012em;
+  /* White */
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.text-search {
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.btn1 {
+  position: absolute;
+  width: 112px;
+  height: 58px;
+  left: 294px;
+  top: 0px;
+  background: #f3ba00;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  box-sizing: border-box;
+}
+.parent-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border: none;
+}
+.auth {
+  width: 398px;
+  height: 58px;
+  /* White */
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.pic {
+  margin-top: 160px;
+}
+.footer{
+  font-family: 'Squada One';
+font-style: normal;
+  position: relative;
+  width: 100vw;
+  height: 137px;
+  left: 0px;
+  top: 0px;
+  /* Primary/Green */
+  background: #1ac073;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.line {
+  position: absolute;
+  width: 1165px;
+  height: 1px;
+  border-radius: 2px;
+  background: #ffffff;
+  bottom: 25px;
+}

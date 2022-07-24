@@ -1,0 +1,168 @@
+.popular-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 600px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.prev {
+  transform: rotate(180deg);
+  fill: none;
+  cursor: pointer;
+}
+#image-response:hover {
+  background-color: white;
+}
+.animated {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+}
+.request {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 25px;
+  gap: 10px;
+
+  width: 210px;
+  height: 48px;
+  left: 615px;
+  top: 1900px;
+
+  background: #1ac073;
+  border-radius: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hoverEffect {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.video-section-container {
+  width: 100vw;
+  height: 860px;
+  /* margin-top: 80px; */
+  position: relative;
+}
+
+.video-upper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 516px;
+}
+.video-header {
+  line-height: 0;
+}
+.video-para {
+  line-height: 1;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: Montserrat;
+  color: #737373;
+  margin: 2px;
+}
+.video-lower {
+  background: #c7eacc;
+  width: 100vw;
+  height: 344px;
+}
+.video-container {
+  width: fit-content;
+  height: 442px;
+  position: absolute;
+  left: 25%;
+  right: 0px;
+  top: 220px;
+  bottom: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 14.58%,
+    rgba(56, 56, 56, 0.84) 100%
+  );
+}
+.form-section {
+  /* width: 100vw; */
+  height: 605px;
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F7F8FA;
+}
+.form {
+  width: 620px;
+}
+.form-dead{
+width: 286px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 10px;
+/* or 100% */
+letter-spacing: -0.012em;
+/* Text/Black Heading title */
+color: #101115;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.margin{
+ margin-top: 0px;
+ margin-bottom: 20px;
+}
+.form-input {
+  width: 305px;
+  height: 58px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.form-textarea {
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  width: 617px;
+  resize: none;
+  padding: 10px;
+}
+.submit{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 19px 25px;
+  margin-top: 20px;
+  width: 210px;
+  
+  background: #1AC073;
+  border-radius: 10px;
+}
+.form-section{
+}
+
+.form-pic {
+margin-left: 70px;
+}
